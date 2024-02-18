@@ -1,0 +1,34 @@
+
+
+#include <stdio.h>
+
+enum months{
+    JAN=1,FEB,MAR,APR,MAY,JUN,JULY,AUG,SEP,OCT,NOV,DEC
+};
+
+int main()
+{
+    //enums
+    enum months month;
+    int salaries[12];
+      int i=1;
+    printf("Enter salaries for Each Month:\n");
+    for(month=JAN;month<=DEC;month++){
+      
+        printf("Enter the salary of  Month-%d:",i);
+        scanf("%d",&salaries[month]);
+        i++;
+    }
+    printf("The Salaries of each Month are Given Below\n");
+    printf("-----------------------------------------\n");
+    printf("            MONTH      |         SALARY    |    \n");
+    printf("------------------------------------------\n");
+    for(month=JAN;month<=DEC;month++){
+        printf("%15d%22d\n",month,salaries[month]);
+        printf("|                     |                 |\n");
+        printf("-----------------------------------------\n");
+    }
+        
+    return 0;
+}
+

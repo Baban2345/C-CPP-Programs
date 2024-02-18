@@ -1,0 +1,71 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+#include<signal.h>
+
+#include <unistd.h>
+
+
+
+static void ctrlC_signal(){
+
+	printf("Ctrl C is pressed...\nSo bye bye\n");
+
+	exit(0);
+
+}
+
+
+
+static void abortSignal()
+
+{
+
+printf("aborting process \n");
+
+printf("bye bye\n");
+
+}
+
+
+
+int main(int argc,char **argv)
+
+{
+
+	signal(SIGINT, ctrlC_signal);
+
+	signal(SIGABRT, abortSignal);
+
+        char ch;
+
+      	printf("Abort process (y/n) ?\n");
+
+      	scanf("%c", &ch);
+
+      	if(ch == 'y')
+
+        	abort();
+
+        else
+
+        printf("Generating Square Numbers\n");
+
+        for(int i=1;i<100;i++)
+
+        {
+
+       		printf(" Square of %d = %d\n",i,i*i);
+
+       		sleep(2);
+
+        }
+
+      	return 0;
+
+
+
+	
+
+}

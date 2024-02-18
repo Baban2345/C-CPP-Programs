@@ -1,0 +1,78 @@
+#include<stdio.h>
+#include<stdlib.h>
+void fpfSf(){
+FILE* fp1;
+int num=100;
+char ch='#';
+float value=10.5;
+int num1;
+int counter=0;
+//char myString[20];
+char myChar;
+fp1=fopen("/home/liveuser/Desktop/file3.txt","w");
+if(fp1==NULL)
+{
+printf("File is unable to open....Please check the FILE");
+}
+else{
+fprintf(fp1,"num is: %d character is : %c and float value is %f ",num,ch,value);
+fputs(" This is is written by using fputs function:\n",fp1);
+fputs("Thank You",fp1);
+fclose(fp1);
+}
+fp1=fopen("/home/liveuser/Desktop/file4.txt","r");
+if(fp1==NULL){
+printf("File is unable to open....Please check the FILE");
+}
+else{
+//fprintf(fp1,"%d",&num);
+//printf("The value which is read  from file is %d",num);
+//fgets(myString,20,fp1);
+//printf("The string which is read  from file using fgets is %s",myString);
+while((myChar=fgetc(fp1))!=EOF)
+{
+printf("%c",myChar);
+counter++;
+}
+printf("Total No of characters in the file are :  %d",counter );
+fclose(fp1);
+}
+}
+
+int main(){
+fpfSf();
+//FILE* fp;
+/*char myChar,myChar1;
+fp=fopen("/home/liveuser/Desktop/Hello.txt","r");
+
+if(fp==NULL){
+printf("File is unable to open....Please check the FILE");
+}
+else{
+printf("File is opened Successfully ......Read this file\n");
+//fgetc
+myChar=fgetc(fp);
+printf(" The first character of the file is  : %c\n",myChar);
+myChar1=fgetc(fp);
+printf(" The next character of the file is  : %c\n",myChar1);
+fclose(fp);
+}*/
+/*fp=fopen("/home/liveuser/Desktop/Hii.txt","w");
+if(fp==NULL){
+printf("File is unable to open....Please check the FILE");
+}else{
+printf(" we are writing into file...\n");
+fputc('H',fp);
+fputc('i',fp);
+fputc('i',fp);
+fputc(' ',fp);
+fputc('G',fp);
+fputc('m',fp);
+
+fclose(fp);
+}*/
+return 0;
+}
+
+
+

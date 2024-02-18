@@ -1,0 +1,42 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+  // 1.   print elements 
+  
+    int size;
+    printf("Enter the Size of the Array: \n");
+    scanf("%d",&size);
+    int student_marks[size];
+    printf("Enter Student Marks on by one : \n");
+    for(int i=0;i<size;i++)
+    scanf("%d",&student_marks[i]);
+    printf("The Entered Marks are : ");
+    for(int i=0;i<size;i++)
+    printf("%d ",student_marks[i]);
+    
+    // 2.   print Lowest marks  in Array
+    
+    
+    int num=student_marks[0];
+    for(int i=1;i<size;i++)
+    {
+     if(num>student_marks[i])
+     num=student_marks[i];
+    }
+    printf("\nThe Lowest Marks in the Given Marks are: %d",num);
+    return 0;
+}
+
+
+
+
+

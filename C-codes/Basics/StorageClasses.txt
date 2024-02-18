@@ -1,0 +1,61 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+int age;
+extern int o=90;
+void imp_global(){
+    age=20;
+    printf("global variable value is :%d\n",age);
+    age=age+1;
+    printf("extern value : %d\n",o);
+}
+
+void imp_auto(){
+    
+    // automatic classes  
+ auto int m=5;
+ m=m+1;
+ printf(" auto value is: %d\n",m);
+  printf("global variable value is :%d\n",age);
+}
+
+
+void imp_static(){
+     // static classes  
+ static int l=5;
+ l=l+1;
+ printf(" static value is: %d\n",l);
+}
+
+
+int main()
+{
+    
+  
+   // storage classes
+// automatic storage class
+auto int i,j;
+printf("%d %d",i,j); // garbage values are printed... unexpected values
+
+//register storage class
+
+ register int k ; // memory is allocated in cpu registers
+for ( k = 1 ; k <= 10 ; k++ )
+printf ( "%d\n", k ) ;
+ 
+imp_static();//here 6 will be printed 
+imp_static();// here 7 will be printed
+imp_auto();// here 6 will be printed
+imp_auto();// here  also 6 will be printed
+imp_global();// here  20 will be printed
+imp_auto();// here 6 will be printed
+ return 0;
+ 
+}
+

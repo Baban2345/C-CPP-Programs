@@ -1,0 +1,45 @@
+
+#include <stdio.h>
+
+
+int main()
+{
+//  int matrix[4][2]={1,255,2,344,3,444,4,555};
+//  for(int i=0;i<4;i++)
+//  {
+//      for(int j=0;j<2;j++)
+//      {
+//          printf("%d ",matrix[i][j]);
+//      }
+//      printf("\n");
+//  }
+ int n,m;
+ int sum=0;
+ int product=1;
+ printf("Enter No of Rows:");
+ scanf("%d",&n);
+ printf("Enter No of Columns:");
+ scanf("%d",&m);
+ int matrix[n][m];
+ printf("Enter Elements: ");
+ for(int i=0;i<n;i++){
+     for (int j=0;j<m;j++){
+         scanf("%d",&matrix[i][j]);
+     }
+ }
+ printf("The matrix you entered is :\n");
+ for(int i=0;i<n;i++){
+     for (int j=0;j<m;j++){
+         printf("%d ",matrix[i][j]);
+         sum+=matrix[i][j];
+         product*=matrix[i][j];
+     }
+     printf("\n");
+ }
+ printf("The sum is:%d\n",sum);
+ printf("The Product is:%d\n",product);
+ 
+}
+
+
+

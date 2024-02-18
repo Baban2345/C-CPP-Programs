@@ -1,0 +1,65 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+// variables 
+
+int age=25;
+int age_after_two_years=age+2;
+int _ageAfterFourYears=age+4;
+printf("Current Age : %d\nAge after Two Years:%d\nAge After Four Years:%d",age,age_after_two_years,_ageAfterFourYears);
+ 
+ // constants
+ 
+ const int new_age=30; // integer constants
+ printf("\nNew Age is:%d",new_age);
+ const float pi=3.14;// real constants
+ printf("\nPi value is %f:",pi);
+ 
+ const char symbol='#';//character constants
+ printf("\nSymbol is:%c",symbol);
+ 
+ // data types
+ 
+ char Symbol='@';   // char -- 1 byte
+ int luckyNumer=10; // int -- 2 bytes 
+ long int number=7993965756;  // long -- 4 bytes
+ float marks_percentage=52.7; // float -- 4 bytes
+ double accuracy=99.999999999999999999999999999999999999999999999999999999999;  // -- 8 bytes
+ long double my_accuracy=9999.99999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+// -- long double -- 10 bytes 
+
+
+// pointers
+
+int i=0;
+printf("\nValue of i is:%d",i);
+printf("\naddress of i is:%p",&i);
+
+// storage classes
+// automatic storage class
+auto int i,j;
+printf("%d %d",i,j);
+
+//register storage class
+
+ register int k ; // memory is allocated in cpu registers
+for ( k = 1 ; k <= 10 ; k++ )
+printf ( "%d\n", k ) ;
+ 
+ 
+ return 0;
+ 
+ 
+ 
+}
+
+

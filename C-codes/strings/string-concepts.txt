@@ -1,0 +1,44 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    //1.   string  as a pointer
+    
+    char *ptr="Hello";
+    puts(ptr);
+    
+  
+    //  2.    string variable declaration;
+
+    char first_stuentName[20]="Baban Mohammad";
+    char second_studentName[20];
+    printf("%s",first_stuentName);
+    printf("\nEnter Second Student Name : \n");
+    scanf("%s",second_studentName);
+    //--It only stores the value before the Whitespace
+    // it only prints name before the encounter of Whitespace
+    printf("\nThe Second student Name is %s ",second_studentName);
+    
+    // 3.   gets--It prints total name
+    
+    char ch[30];
+    puts("Again Enter Name: ");
+    fgets(ch,30,stdin);
+    printf("Name is : %s",ch);
+    return 0;
+
+    
+}
+
+
+
+
+

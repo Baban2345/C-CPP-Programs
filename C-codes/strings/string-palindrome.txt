@@ -1,0 +1,51 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+  // string functions
+  // program for check wether the given string is palindrome or not
+  
+  int size;
+  printf("Enter Size of string : \n");
+  scanf("%d",&size);
+  char string[size],rev_string[size];
+  int i,j;
+  fgets(string,size,stdin);
+  printf("Enter string:\n");
+  fgets(string,size,stdin);
+  for(i=strlen(string)-2,j=0;i>=0,j<=size;i--,j++)
+  {
+      rev_string[j]=string[i];
+  }
+  printf("the Given string is : %s and the reverse of it is : %s \n",string,rev_string);
+  int f=0;
+  i=0;
+  while(rev_string[i]!='\0'){
+      
+      if(string[i]!=rev_string[i])
+      {
+          f=1;
+          break;
+      }
+      i++;
+  }
+  if (f==0)
+  printf("Given string is palindrome\n");
+    else
+    printf("\nGiven string is not a palindrome");
+  
+  return 0;
+}
+
+
+
+

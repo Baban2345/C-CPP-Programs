@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<malloc.h>
+
+struct node{
+  int data;
+  struct node* next;
+  };
+  void insertNode(){
+    struct node *head;
+    head=0;
+      struct node *newNode,*temp;
+      int num, choice=0,counter=0;
+      while(choice != -1)
+       {
+              newNode=(struct node*)malloc(sizeof(struct node));
+                printf("Enter data ");
+                scanf("%d",&newNode->data);
+                    if(head ==0)
+                    {
+                          head =temp=newNode;
+                    }
+                else{
+                  temp->next=newNode;
+                  temp=newNode;
+                          } 
+        printf("Do you want to Enter data again..press 1 for yes  -1 to exit:\n");
+        scanf("%d",&choice);
+    }
+      temp=head;
+      printf("data is:");
+      while(temp!=0)
+    {
+        printf("%d         ",temp->data);
+          temp=temp->next;
+          counter++;
+}
+printf("\nNo of elements are :%d",counter);
+}
+  
+int main(){
+
+insertNode();
+return 0;
+}

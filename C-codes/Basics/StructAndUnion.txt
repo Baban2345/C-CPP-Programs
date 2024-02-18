@@ -1,0 +1,70 @@
+
+//structures and unions
+
+#include <stdio.h>
+#include<string.h>
+ struct students
+  {
+    int rollNo;
+    char name[20];
+    int age;
+  };
+  //Union
+  union Student{
+    int rollNo;
+    char name[20];
+    char symbol;
+    int age;
+};
+
+void unionArray(){
+ int size;
+ printf("Enter No of Students Data:");
+ scanf("%d",&size);
+  union Student st_data[size]; //10
+  for(int i=0;i<size;i++){
+  printf("Student %d Data:\n",i+1);
+  printf("----------------------\n");
+  printf("Enter Student Roll No:");
+  scanf("%d",&st_data[i].rollNo);
+  printf("Enter Student Name:\n");
+  scanf("%s",st_data[i].name);
+  printf("Enter Student Age:\n");
+  scanf("%d",&st_data[i].age);
+  }
+  printf("---Data Entered Successfully----\n");
+  for(int i=0;i<size;i++){
+  printf("Student %d Data:\n",i+1);
+  printf("----------------------\n");
+  printf(" Student Roll No is : %d\n",st_data[i].rollNo);
+  printf("Student Name is:%s\n",st_data[i].name);
+  printf("Student Age is :%d\n",st_data[i].age);
+ 
+  }
+}
+
+
+
+int main()
+{
+    struct students s1;
+    struct students s2={5,"Manik",23};
+    s1.rollNo=1;
+    strcpy(s1.name,"Baban");
+    s1.age=22;
+    printf("Student 1 Details:\n");
+    printf("-----------------------\n");
+    printf("Roll No is: %d\n",s1.rollNo);
+    printf("Age is:%d\n",s1.age);
+    printf("Name is %s\n",s1.name);
+     printf("-----------------------\n");
+    printf("Student 2 Details:\n");
+    printf("-----------------------\n");
+    printf("Roll No is: %d\n",s2.rollNo);
+    printf("Age is:%d\n",s2.age);
+    printf("Name is %s\n",s2.name);
+    unionArray();
+    return 0;
+}
+
+

@@ -1,0 +1,45 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct node
+{
+  int data;
+  struct node  *next;
+}Node;
+
+Node * createNode()
+{
+Node *head;
+Node *curr_Node;
+int num;
+printf("Please Enter a Number or -1 to finish\n");
+scanf("%d",&num);
+
+if(num == -1)
+return NULL;
+
+head=(Node*)malloc(sizeof(Node));
+curr_Node=head;
+curr_Node->data=num;
+printf("Please Enter a Number or -1 to finish\n");
+scanf("%d",&num);
+
+while(num != -1){
+curr_Node->next=(Node*)malloc(sizeof(Node));
+curr_Node=curr_Node->next;
+curr_Node->data=num;
+printf("Please Enter a Number or -1 to finish\n");
+scanf("%d",&num);
+}
+curr_Node->next=NULL;
+Node *cu=head;
+while(cu!=NULL){
+printf("%d,",cu->data);
+cu=cu->next;}
+}
+
+int main()
+{
+createNode();
+return 0;
+}

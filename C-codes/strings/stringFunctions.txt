@@ -1,0 +1,88 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+void lengthOfString(){
+    //1.  To find length of the string - strlen()
+    
+  char studentName[]="Mohammad Baban";
+   int length_of_string=strlen(studentName);
+   printf("The length of Student Name is : %d",length_of_string);
+    //2.  using Logic
+    
+    char ch[20];
+    int i=0;
+    int length;
+    printf("\nEnter student Name: \n");
+    fgets(ch,20,stdin);
+  while(ch[i] != '\0')
+    i++;
+  length=i;
+    printf("The length of student Name is : %d",length-1);
+}
+
+void upperToLower(){
+    char string[20],lowercase[20];
+    int i;
+    printf("\nEnter a string:\n");
+    fgets(string,20,stdin);
+    
+   for (int i = 0; i < strlen(string); i++) {
+        string[i] = tolower(string[i]);
+    }
+    printf("%s",string);
+    while(string[i]!='\0'){
+    if(string[i]>='A' && string[i]<='Z')
+        lowercase[i]=string[i]+32;
+    else
+        lowercase[i]=string[i];
+    i++;
+    }
+    printf("The string in Lowercase is : %s",lowercase);
+}
+void appendString(){
+    int i=0,j=0;
+    char string1[20],string2[20],string3[40];
+    printf("Enter First String : \n");
+    fgets(string1,20,stdin);
+    printf("Enter Second String :");
+    fgets(string2,20,stdin);
+    string1[strlen(string1)-1]=' ';
+     while(string1[i] != '\0'){
+       string3[i]=string1[i];
+       i++;
+       j++; // hello
+   }
+   i=0;
+   while(string2[i]!='\0'){
+       string3[j]=string2[i];
+       i++;
+       j++;
+   }
+   printf("The Appended String is : %s ",string3);
+   printf("%s",strcat(string1,string2));
+   }
+
+
+int main()
+{
+    // string functions
+    
+     upperToLower();
+    //lengthOfString();
+    //appendString();
+    
+    
+}
+
+
+
+

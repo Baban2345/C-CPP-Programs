@@ -1,0 +1,38 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+// Addition Program using user input
+
+
+#include<stdio.h>
+int main(){
+    int choice;
+    int number;
+    printf("This is Addition Calculator \n");
+    printf("Select Your Operation : 1. Addition\n 2.Substraction\n 3.Multiplication\n 4.Division\n 5.Exit\n");
+    scanf("%d",&choice);
+    
+    switch(choice)
+    case 1:
+    printf("You selected Addition\n");
+    printf("How many Numbers You Want :");
+    scanf("%d",&number);
+    for(int i=1; i<=number; i++){
+        int sum=0;
+        printf("Enter The %d Number:",i);
+        int j;
+        scanf("%d",&j);
+    }
+    sum=sum+j;
+        printf(" The sum is : %d",sum);
+    
+    
+    
+    return 0;
+}
+

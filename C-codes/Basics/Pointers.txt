@@ -1,0 +1,82 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+void returnHighestMarks(int studentMarks[],int *highestMarks)
+{
+    *highestMarks=0;
+    int n=3;
+        for (int i = 1; i < n; i++) {
+            if (studentMarks[i] > *highestMarks) {
+              *highestMarks=studentMarks[i];
+            }
+        }
+        
+}
+
+void returnLowestMarks(int studentMarks[],int *lowestMarks)
+{
+    *lowestMarks=studentMarks[0];
+    int n=3;
+        for (int i = 1; i < n; i++) {
+            if (studentMarks[i] < *lowestMarks) {
+              *lowestMarks=studentMarks[i];
+            }
+        }
+    
+}
+
+void returnAvgMarks(int studentMarks[],float *avgMarks)
+{
+    int sum=0;
+    for(int i=0;i<3-1;i++){// 0--10 1-20
+       sum+=studentMarks[i];//10 2
+    }
+    *avgMarks=sum/3;
+}
+void swapfun(int *num1,int *num2)
+{
+int temp;
+    temp=*num1;
+ *num1=*num2;
+ *num2=temp;
+}
+int main()
+{
+    char str[]="Mohammad Baban";
+    int studentMarks[3];
+    float avgMarks;
+    int highestMarks,lowestMarks;
+    printf("===Student Marks===\n");
+    for(int i=0;i<3;i++)
+    {
+        printf("Enter student Marks for subject %d:",i+1);
+        scanf("%d",&studentMarks[i]);
+    }
+    returnHighestMarks(studentMarks,&highestMarks);
+    returnLowestMarks(studentMarks,&lowestMarks);
+    returnAvgMarks(studentMarks,&avgMarks);
+    printf("\nThe highest Marks Are:%d",highestMarks);
+    printf("\nThe lowest Marks Marks Are:%d",lowestMarks);
+    printf("\nThe Avg Marks Are:%f",avgMarks);
+    
+    int num1,num2;
+    printf("Enter Number 1:");
+    scanf("%d",&num1);
+    printf("Enter Number 2:");
+    scanf("%d",&num2);
+    printf("Values before Swapping\nNUM1 = %d NUM2=%d ",num1,num2);
+    swapfun(&num1,&num2);
+    printf("\nValues After Swapping\nNUM1 = %d NUM2=%d ",num1,num2);
+    return 0 ;
+}
+
+
+
+
+

@@ -1,0 +1,53 @@
+#includ<stdio.h>
+
+#include<stdlib.h>
+
+
+
+int main()
+
+{
+
+	int *arr;
+
+	arr=(int*)malloc(sizeof(int)));//malloc
+	
+    //arr=(int*)calloc(5,sizeof(int)));//calloc
+	char ch='a';.
+
+	int i=0;
+
+	while(ch!="n" || ch!="N")
+
+	{
+
+		Printf("Enter Element %d\n",&i+1);
+
+		scanf("%d",&a[i]);
+
+		i++;
+
+		printf("do you Want to elements Again..:\n");
+
+		scanf("%c",&ch);
+
+	}
+
+	if(arr!=NULL)
+
+	{
+
+		printf("Elements are Entered Successfully.....!\n");
+
+	}
+
+	else
+
+	printf("elements are not inserted....check Memory\n");
+
+
+    free(arr)//free
+}
+
+
+

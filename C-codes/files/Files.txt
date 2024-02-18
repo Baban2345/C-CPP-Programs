@@ -1,0 +1,48 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<stdlib.h>
+//File Operations  steps
+
+int main()
+{
+  
+// step1 : creating a pointer that points to a FILE type
+
+FILE* fp;
+
+// step 2: opening or accessing FILE   syntax
+//fp=fopen(<file_name>,<type_of_operation>);
+// types of Operations
+/* 
+    1. -- "w" - writing
+    2. --  "r" - Reading
+    3. --  "a"  -  Appending
+*/
+
+    fp=fopen("hello.txt","r");     //"W" OPERATION --> CREATES A FILE IF IT DOESN'T EXISTS AND OVERRIDES FILE IF IT EXISTS. IF ANY CONTENT EXIST IN THE  EXISTING FILE THEN THE CONTENT WILL BE VANISHED 
+// step 3-- // returns NULL if operation of fopen unsuccessfull due to any reasons
+    
+// if(fp!=NULL) - to make sure that the open operation was successfull
+    if(fp==NULL)
+    {
+        
+        printf("File open was failed..file not found");
+    }
+    else
+    {
+        printf("File is  opened... Check File ");
+        
+         fclose(fp);
+    }
+// step -4 --    // code for working with the file
+// step 5 -- close the FILE    
+   
+    return 0;
+}

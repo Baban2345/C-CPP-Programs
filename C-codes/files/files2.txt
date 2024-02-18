@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+void fileCreate(){
+FILE *fp1;
+char myChar;
+char str[100];
+fp1=fopen("studentData.txt","w");
+
+if(fp1!=NULL)
+{
+    scanf("%[^\n]",str);
+    fprintf(fp1,"student name is :  %s\n",str);
+    
+    fputs("My Name is Babann\n",fp1);
+    fputs("This is My text file\n",fp1);
+    fputs("Thanks",fp1);
+    fclose(fp1);
+    fp1=fopen("studentData.txt","r");
+    
+    while((myChar=fgetc(fp1)) != EOF)
+  {
+    
+    printf("%c",myChar);  
+  }
+  fclose(fp1);
+}
+else
+{
+    printf("Cant open file,,,,");
+}
+}
+
+int main(){
+
+fileCreate();
+
+return 0;
+}

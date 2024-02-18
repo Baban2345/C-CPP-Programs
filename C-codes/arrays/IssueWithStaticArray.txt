@@ -1,0 +1,60 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+#define SIZE 5
+
+int *createArray();
+
+int main(){
+
+    int *arr;
+
+    arr=createArray();
+
+    printArr(arr,SIZE);
+
+}
+
+int *createArray(){
+
+    int myArr[SIZE];
+
+    printf("Enter %d Elements\n",SIZE);
+
+    for(int i=0;i<SIZE;i++){
+
+        printf("Enter %d Element:",i+1);
+
+        scanf("%d",&myArr[i]);
+
+    }
+
+    printf("\n");
+
+    return myArr;
+
+     // This array exist only till its function. after this fn completes its execution its values are dead as it is localto its 	function
+
+}
+
+int printArr(int *arr,int size){
+
+    printf("The Elements Are:\n");
+
+for(int i=0;i<size;i++){
+
+    printf(" %d Element: is %d",i+1,arr[i]); // These values are not get printed
+
+    }
+
+    printf("\n");
+
+    return 0;
+
+}
+
+
+
+
+
